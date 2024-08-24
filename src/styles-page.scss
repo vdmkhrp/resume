@@ -1,0 +1,129 @@
+@import "./scss/base/custom-reset";
+@import "./scss/base/fonts";
+@import "./scss/base/variables";
+
+body {
+  font-family: $page-font;
+  color: $dark--200;
+  line-height: 1.1;
+}
+
+.page-wrapper {
+  width: 210mm;
+  height: 297mm;
+  margin-inline: auto;
+  border: 1px solid #000;
+}
+
+.page {
+  padding: 25pt 42pt;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8pt;
+    padding-bottom: 16pt;
+    margin-bottom: 24pt;
+    border-bottom: 1pt solid rgba($dark--900, 0.05);
+  }
+
+  &__title {
+    font-size: 24pt;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 14pt;
+    font-weight: 700;
+
+    &--accent {
+      color: $purple;
+      padding-bottom: 8pt;
+    }
+
+    &--small {
+      font-size: 11pt;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    column-gap: 16pt;
+    align-items: center;
+    padding-top: 8pt;
+  }
+
+  &__link {
+    font-size: 9pt;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 93pt;
+    column-gap: 36pt;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16pt;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8pt;
+  }
+
+  &__block-title {
+    font-size: 9pt;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8pt;
+    padding-bottom: 8pt;
+  }
+
+  &__list-title {
+    font-size: 9pt;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  &__list-item {
+    font-size: 9pt;
+    line-height: 1.5;
+    display: flex;
+    column-gap: 6pt;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 3pt;
+      aspect-ratio: 1;
+      background-color: $dark--900;
+      border-radius: 50%;
+      flex-shrink: 0;
+      align-self: baseline;
+      margin-top: 0.5lh;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16pt;
+  }
+
+  &__text {
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+}

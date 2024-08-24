@@ -1,0 +1,84 @@
+.portfolio {
+  $root: &;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 30px 60px;
+
+    @media (width <= 1024px) {
+      max-width: 800px;
+    }
+
+    @media (width <= 768px) {
+      row-gap: 30px;
+      max-width: 600px;
+      padding: 15px 30px;
+    }
+  }
+
+  &__title {
+    width: 480px;
+    margin-inline: auto;
+
+    @media (hover: hover) {
+      &:hover {
+        #{$root} {
+          &__path {
+            stroke: rgba($accent, 0.2);
+            fill: transparent;
+          }
+
+          &__path-animation {
+            stroke: $accent;
+          }
+        }
+      }
+    }
+
+    @media (width <= 1024px) {
+      width: 400px;
+    }
+
+    @media (width <= 768px) {
+      width: 320px;
+    }
+
+    @media (width <= 375px) {
+      width: 260px;
+    }
+  }
+
+  &__path {
+    stroke: transparent;
+    fill: $accent;
+    transition: fill $animation-duration ease-out;
+  }
+
+  &__path-animation {
+    stroke: transparent;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 1000;
+    animation-duration: 10s;
+    animation-name: dash;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: stroke $animation-duration ease-out;
+  }
+
+  @media (width <= 1024px) {
+    height: auto;
+  }
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

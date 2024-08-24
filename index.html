@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> sprite }}
+      {{> preloader }}
+    <div class="container">
+      <header class="header">
+        <h2 class="header__subtitle">Hey There I’m</h2>
+        <h1 class="header__title">Vadym</h1>
+        <div class="header__description">
+          <p class="header__text">beginner frontend developer</p>
+          <a href="https://github.com/vdmkhrp" class="header__link" data-action>
+            <svg class="icon icon--54">
+              <use href="#github"></use>
+            </svg>
+          </a>
+        </div>
+      </header>
+      <a
+        href="./cv.html"
+        class="cv-link"
+        data-tilt
+        data-tilt-glare="true"
+        data-tilt-max-glare="0.5"
+        data-tilt-speed="400"
+        data-tilt-scale="1.2"
+        data-tilt-max="10"
+        data-tilt-perspective="500"
+      >
+        cv
+      </a>
+      <div class="arrow-block arrow-block--right">
+        <a
+          href="./portfolio.html"
+          class="arrow-block__link arrow-block__link--right"
+          data-action
+        >
+          <svg class="icon icon--64">
+            <use href="#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="wrapper">
+        <div class="running-block">
+          <div class="running-block__item" style="--index: 0">
+            front-end developer
+          </div>
+          <div class="running-block__item" style="--index: 1">
+            front-end developer
+          </div>
+          <div class="running-block__item" style="--index: 2">
+            front-end developer
+          </div>
+        </div>
+        <div class="running-block">
+          <div class="running-block__item" style="--index: 0">
+            front-end developer
+          </div>
+          <div class="running-block__item" style="--index: 1">
+            front-end developer
+          </div>
+          <div class="running-block__item" style="--index: 2">
+            front-end developer
+          </div>
+        </div>
+      </div>
+      <div class="shadow-wrapper"></div>
+    </div>
+    <div class="custom-cursor"></div>
+    <script src="./src/js/script.js" type="module"></script>
+    <script src="./src/js/vanila-tilt.js" type="module"></script>
+  </body>
+</html>
