@@ -16,11 +16,16 @@
     color: $accent;
 
     @media (width <= 768px) {
-      flex-basis: 180px;
+      flex-basis: 120px;
+    }
+
+    @media (width <= 375px) {
+      flex-basis: 90px;
     }
   }
 
   @media (width <= 768px) {
-    gap: 30px;
+    column-gap: 20px;
+    row-gap: 30px;
   }
 }
