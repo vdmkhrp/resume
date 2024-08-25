@@ -30,7 +30,7 @@ const pageData = {
 
 export default defineConfig({
   root: __dirname,
-  base: "/",
+  base: "./",
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),
