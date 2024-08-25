@@ -5,14 +5,14 @@
 body {
   font-family: $page-font;
   color: $dark--200;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .page-wrapper {
+  position: relative;
   width: 210mm;
   height: 297mm;
   margin-inline: auto;
-  border: 1px solid #000;
 }
 
 .page {
@@ -125,5 +125,36 @@ body {
   &__text {
     font-size: 9pt;
     line-height: 1.5;
+  }
+}
+
+.print-btn {
+  position: absolute;
+  top: 40pt;
+  right: 80pt;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: $gray;
+  box-shadow: 0 0 0 1px #ebebeb inset,
+              0 0 0 2px rgba(255, 255, 255, 0.1) inset,
+              0 8px 0 0 #bebebe, 0 8px 8px 1px rgba($dark--900, 0.2);
+  background-color: #f9f9f9;
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 40ms;
+  transition-timing-function: linear;
+
+  &:active {
+    box-shadow: 0 0 0 1px #ebebeb inset,
+                0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                0 1px 3px 1px rgba($dark--900, 0.1);
+    background-color: #f9f9f9;
+    transform: translateY(6px);
+  }
+
+  @media print {
+    display: none;
   }
 }
