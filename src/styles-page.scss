@@ -86,7 +86,7 @@ body {
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 8pt;
+    row-gap: 3pt;
     padding-bottom: 8pt;
   }
 
@@ -98,15 +98,14 @@ body {
 
   &__list-item {
     font-size: 9pt;
-    line-height: 1.5;
+    line-height: 1.4;
     display: flex;
     column-gap: 6pt;
 
     &::before {
       content: "•";
       display: block;
-      color: $dark--900;
-      flex-shrink: 0;
+      color: $purple;
       align-self: baseline;
       margin-top: 0.5lh;
       transform: translateY(-50%);
@@ -116,19 +115,14 @@ body {
   &__sidebar {
     display: flex;
     flex-direction: column;
-    row-gap: 16pt;
-  }
-
-  &__text {
-    font-size: 9pt;
-    line-height: 1.5;
+    row-gap: 8pt;
   }
 }
 
 .print-btn {
   position: absolute;
-  top: 40pt;
-  right: 80pt;
+  bottom: 40pt;
+  right: 40pt;
   padding: 10px 16px;
   border: none;
   border-radius: 6px;

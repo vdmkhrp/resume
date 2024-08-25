@@ -37,24 +37,24 @@ document.addEventListener("mousemove", (e) => {
 
 document.addEventListener("mouseout", destroyCursor);
 
-const tiltElements = document.querySelectorAll('[data-tilt]');
+const tiltElements = document.querySelectorAll("[data-tilt]");
 
 function isHoverSupported() {
-    return window.matchMedia('(hover: hover)').matches;
+  return window.matchMedia("(hover: hover)").matches;
 }
 
 function updateTilt() {
-    tiltElements.forEach(element => {
-        if (isHoverSupported()) {
-            VanillaTilt.init(element);
-        } else {
-            if (element.vanillaTilt) {
-                element.vanillaTilt.destroy();
-            }
-        }
-    });
+  tiltElements.forEach((element) => {
+    if (isHoverSupported()) {
+      VanillaTilt.init(element);
+    } else {
+      if (element.vanillaTilt) {
+        element.vanillaTilt.destroy();
+      }
+    }
+  });
 }
 
 updateTilt();
 
-window.addEventListener('resize', updateTilt);
+window.addEventListener("resize", updateTilt);
