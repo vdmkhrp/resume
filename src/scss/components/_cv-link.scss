@@ -18,13 +18,7 @@
   @media (width <= 768px) {
     width: 44px;
     bottom: 5vh;
-    right: 5vh;
+    right: 3vh;
     font-size: 16px;
-  }
-
-  &--off {
-    @media (width <= 1024px) {
-      display: none;
-    }
   }
 }

@@ -103,12 +103,9 @@ body {
     column-gap: 6pt;
 
     &::before {
-      content: "";
+      content: "•";
       display: block;
-      width: 3pt;
-      aspect-ratio: 1;
-      background-color: $dark--900;
-      border-radius: 50%;
+      color: $dark--900;
       flex-shrink: 0;
       align-self: baseline;
       margin-top: 0.5lh;
@@ -138,9 +135,8 @@ body {
   font-weight: 600;
   cursor: pointer;
   color: $gray;
-  box-shadow: 0 0 0 1px #ebebeb inset,
-              0 0 0 2px rgba(255, 255, 255, 0.1) inset,
-              0 8px 0 0 #bebebe, 0 8px 8px 1px rgba($dark--900, 0.2);
+  box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.1) inset,
+    0 8px 0 0 #bebebe, 0 8px 8px 1px rgba($dark--900, 0.2);
   background-color: #f9f9f9;
   transition-property: box-shadow, background-color, transform;
   transition-duration: 40ms;
@@ -148,8 +144,8 @@ body {
 
   &:active {
     box-shadow: 0 0 0 1px #ebebeb inset,
-                0 0 0 1px rgba(255, 255, 255, 0.15) inset,
-                0 1px 3px 1px rgba($dark--900, 0.1);
+      0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+      0 1px 3px 1px rgba($dark--900, 0.1);
     background-color: #f9f9f9;
     transform: translateY(6px);
   }

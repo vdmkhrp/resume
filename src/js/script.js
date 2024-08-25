@@ -1,3 +1,5 @@
+import "./vanila-tilt";
+
 const cursor = document.querySelector(".custom-cursor");
 const links = document.querySelectorAll("[data-action]");
 let isCursorInited = false;
@@ -34,3 +36,25 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("mouseout", destroyCursor);
+
+const tiltElements = document.querySelectorAll('[data-tilt]');
+
+function isHoverSupported() {
+    return window.matchMedia('(hover: hover)').matches;
+}
+
+function updateTilt() {
+    tiltElements.forEach(element => {
+        if (isHoverSupported()) {
+            VanillaTilt.init(element);
+        } else {
+            if (element.vanillaTilt) {
+                element.vanillaTilt.destroy();
+            }
+        }
+    });
+}
+
+updateTilt();
+
+window.addEventListener('resize', updateTilt);
