@@ -1,0 +1,29 @@
+.custom-cursor {
+  display: none;
+
+  @media (hover: hover) {
+    display: block;
+    width: 12px;
+    aspect-ratio: 1;
+    margin-left: -6px;
+    margin-top: -6px;
+    pointer-events: none;
+    border-radius: 50%;
+    background-color: $accent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: scale $animation-duration ease-in-out;
+
+    &--init {
+      opacity: 1;
+    }
+
+    &--link {
+      scale: 4.5;
+    }
+  }
+}
